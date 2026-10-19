@@ -116,9 +116,7 @@ public class CardService {
 
         Card card = cardToBlock.get();
 
-        if ("BLOCKED".equals(card.getStatus().getName())) {
-            throw new Exception("Card is already blocked");
-        }
+    
 
         CardStatus blockedStatus = cardStatusRepository.findFirstByName("BLOCKED");
 
